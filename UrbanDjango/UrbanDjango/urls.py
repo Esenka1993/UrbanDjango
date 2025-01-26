@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from UrbanDjango.task2.views import func_presentation, ClassPresentation
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('funcpr/', func_presentation),
+    path('classpr/', ClassPresentation.as_view()),
+    ]
